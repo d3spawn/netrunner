@@ -23,18 +23,13 @@ A purpose-built virtual environment for practicing penetration testing methodolo
 - **Audit Trail**: Comprehensive documentation and screenshots
 
 ## 📁 Documentation Structure
-```tree
-
 ```
 offensive-lab/
-├── [README.md](README.md)                    # Overview & quick start
-├── [network-config.md](network-config.md)    # Network architecture
-├── [setup-guide.md](setup-guide.md)          # VM installation guide
-├── [verification-tests.md](verification-tests.md) # Lab validation
-└── [screenshots/](screenshots/)              # Visual evidence
-    ├── setup/                  # Installation screenshots
-    └── validation/             # Test evidence
-```
+├── [README.md](README.md)
+├── [network-config.md](network-config.md)
+├── [setup-guide.md](setup-guide.md)
+├── [verification-tests.md](verification-tests.md)
+└── [screenshots/](screenshots/)
 ```
 
 ## 📚 Documentation Guide
@@ -96,6 +91,7 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
 
