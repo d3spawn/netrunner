@@ -1,18 +1,33 @@
-# Cybersecurity Home Lab Portfolio
 
-## 🎯 Professional Overview
-A comprehensive, isolated environment for practicing both offensive and defensive security techniques. This lab demonstrates practical application of security principles through deliberately architected virtual networks.
 
-## 🏗️ Architecture Philosophy
-> "Tools don't secure networks; architecture does. This lab was built to understand *why* before learning *how*."
+# Home Lab
 
-### **Core Design Principles**
-1. **Isolation First**: Complete separation from production networks
-2. **Intentional Connectivity**: Every network path exists for a specific purpose
-3. **Reproducibility**: Documented configurations for consistent testing
-4. **Progressive Complexity**: Structured learning path from fundamentals to advanced
+This home lab forms the foundational environment for all practical work in the **netrunner** repository.
 
-## 📂 Project Structure
-00-home-lab/
-├── offensive-lab/ # Penetration testing environment
-├── defensive-lab/ # Security operations & analysis
+It is designed to provide a controlled and isolated space to understand how systems are built, attacked, monitored, and defended, with an emphasis on fundamentals rather than tool-driven workflows.
+
+## Objectives
+
+- Design and maintain isolated lab environments
+- Understand system behavior from both offensive and defensive perspectives
+- Practice safe enumeration, exploitation, and detection techniques
+- Document architectural decisions and technical reasoning clearly
+
+## Lab Design
+
+The home lab supports two complementary perspectives:
+
+- **Offensive lab** — focuses on attacker behavior against intentionally vulnerable systems
+- **Defensive lab** — focuses on visibility, logging, monitoring, and analysis
+
+Both perspectives are built on shared assumptions around isolation, scope, and authorization.
+
+## Scope & Ethics
+
+All activities in this home lab are performed exclusively within:
+- Local virtualized environments
+- Intentionally vulnerable machines
+- Authorized training or challenge platforms
+
+No testing is conducted against real-world systems, networks, or data without explicit permission.  
+This lab exists solely for security learning, experimentation, and defensive skill development.
