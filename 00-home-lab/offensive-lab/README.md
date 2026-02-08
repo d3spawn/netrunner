@@ -25,11 +25,11 @@ A purpose-built virtual environment for practicing penetration testing methodolo
 ## 📁 Documentation Structure
 ```
 offensive-lab/
-├── [README.md](README.md)
-├── [network-config.md](network-config.md)
-├── [setup-guide.md](setup-guide.md)
-├── [verification-tests.md](verification-tests.md)
-└── [screenshots/](screenshots/)
+├── **[README.md](README.md)**
+├── network-config.md
+├── setup-guide.md
+├── verification-tests.md
+└── screenshots/
 ```
 
 ## 📚 Documentation Guide
@@ -91,6 +91,7 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
 
