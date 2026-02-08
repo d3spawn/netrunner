@@ -32,34 +32,56 @@ offensive-lab/
 
 ## 📚 Documentation Guide
 
+## **More Detailed**
+
+```markdown
+## 🚀 Lab Build Process
+
+### **Phase 1: Planning & Design** 
+📋 **Document:** `network-config.md`
+- Design network architecture
+- Plan IP addressing
+- Configure VMware virtual networks
+
+### **Phase 2: Implementation**
+🔧 **Document:** `setup-guide.md`
+- Install Kali Linux VM
+- Deploy Metasploitable 2
+- Configure network interfaces
+
+### **Phase 3: Verification**
+✅ **Document:** `verification-tests.md`
+- Test connectivity
+- Verify isolation
+- Confirm security controls
+
+### **Phase 4: Documentation**
+📸 **Folder:** `screenshots/`
+- Capture evidence
+- Document results
+- Create visual proof
+```
+**Tabular**
+
 | Document | Purpose | When to Use |
 |----------|---------|-------------|
-| **[setup-guide.md](setup-guide.md)** | Step-by-step installation | First-time setup or VM recreation |
 | **[network-config.md](network-config.md)** | Architecture & IP planning | Understanding lab design |
+| **[setup-guide.md](setup-guide.md)** | Step-by-step installation | First-time setup or VM recreation |
 | **[verification-tests.md](verification-tests.md)** | Validation procedures | Confirming lab functionality |
 | **[screenshots/](screenshots/)** | Visual evidence | Verifying setup steps |
 
 ## 🏗️ Build Workflow
-
 ```mermaid
 graph TD
-    A[🎯 Start: Plan Architecture] --> B[📋 network-config.md]
-    B --> C{VMware Network Setup}
-    C --> D[✅ Configure VMnet1 & VMnet8]
-    D --> E[🔧 setup-guide.md]
-    E --> F[🖥️ Install Kali Linux]
-    E --> G[🎯 Deploy Metasploitable2]
-    F --> H[✅ verification-tests.md]
-    G --> H
-    H --> I[📸 screenshots/]
-    I --> J[🚀 Lab Ready for Practice]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style E fill:#f1f8e9
-    style H fill:#fff3e0
-    style J fill:#e8f5e8
+    A[Start Here] --> B[network-config.md]
+    B --> C[setup-guide.md]
+    C --> D[verification-tests.md]
+    D --> E[screenshots/]
+    E --> F[✅ Lab Ready!]
 ```
+
+
+
 
 ## ⚠️ Legal & Ethical Notice
 > This lab exists solely for educational purposes within an isolated virtual environment. All documented activities are performed against intentionally vulnerable systems that have no connectivity to external networks. This lab follows responsible disclosure principles and ethical testing guidelines.
@@ -67,6 +89,7 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
 
