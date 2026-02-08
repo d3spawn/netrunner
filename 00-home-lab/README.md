@@ -8,9 +8,9 @@ It focuses on understanding **system behavior, network design, and security trad
 ## Structure
 ```
 00-home-lab/
-├── shared/ # Network topology, assumptions, and scope
-├── offensive-lab/ # Attacker-focused environment and workflows
-└── defensive-lab/ # Monitoring, logging, and analysis environment
+├── shared/              # Network topology, assumptions, and scope
+├── offensive-lab/       # Attacker-focused environment and workflows
+└── defensive-lab/       # Monitoring, logging, and analysis environment
 ```
 ---
 
@@ -71,6 +71,7 @@ This lab exists solely for education, experimentation, and defensive security le
 This lab exists solely for security learning, experimentation, and defensive skill development.
 
 ---
+
 
 
 
