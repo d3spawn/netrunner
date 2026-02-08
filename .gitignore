@@ -1,0 +1,92 @@
+####################################
+# OS / Editor junk
+####################################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+####################################
+# Python
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.env
+.venv/
+venv/
+ENV/
+
+####################################
+# Logs & temporary files
+####################################
+*.log
+*.tmp
+*.bak
+*.old
+
+####################################
+# Virtualization artifacts
+# (DO NOT commit VM disks)
+####################################
+*.vmdk
+*.vdi
+*.ova
+*.ovf
+*.qcow2
+*.img
+*.iso
+
+.vagrant/
+VirtualBox VMs/
+VMware/
+
+####################################
+# Network captures (raw)
+# Keep parsed/annotated versions only
+####################################
+*.pcap
+*.pcapng
+
+####################################
+# Credential / secret material
+####################################
+secrets/
+credentials/
+*.key
+*.pem
+*.crt
+*.pfx
+*.kdbx
+*.ovpn
+
+####################################
+# Tool output that should not be tracked
+####################################
+metasploit/
+msfconsole_history
+nmap/*.xml
+nmap/*.gnmap
+
+####################################
+# Build / compiled artifacts
+####################################
+dist/
+build/
+*.exe
+*.dll
+*.bin
+
+####################################
+# Large generated files
+####################################
+*.zip
+*.tar
+*.gz
+*.7z
