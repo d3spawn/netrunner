@@ -15,14 +15,23 @@ Network Editor Actions:
 ### Evidence Gallery:
 
 #### 1. VMware Network Configuration
-![VMware Network Editor](screenshots/01-vmware-network-editor.png)
+
+<div align="center">
+  ![VMware Network Editor](screenshots/01-vmware-network-editor.png)
+  *VMnet1 and VMnet8 Network Modes*
+</div>
 
 #### 2. Subnet Settings
-![VMnet Subnet Settings](screenshots/02-vmnet-subnet-settings.png)
+<div align="center">
+  ![VMnet Subnet Settings](screenshots/02-vmnet-subnet-settings.png)
+  *VMnet1 and VMnet8 Subnets*
+</div>
 
 #### 3. Kali VM Settings
-![Kali VM Configuration](path/to/the/dir)
-
+<div align="center">
+  ![Kali VM Configuration](path/to/the/dir)
+  *add somthing here*
+</div>
 ---
 
 ### 1.2 IP Address Planning
@@ -33,11 +42,13 @@ Network Editor Actions:
 | Kali Linux      | eth1      | VMnet1 (Host-Only)  | 192.168.56.128  | N/A         | Attack Traffic  |
 | Metasploitable2 | eth0      | VMnet1 (Host-Only)  | 192.168.56.129  | N/A         | Vulnerable Target |
 
-### 1.3 Network Architecture Overview
 
 ### 1.3 Network Architecture Overview
 
-![Strategic Network Segmentation Diagram](diagrams/Strategic%20Network%20Segmentation.png)
+<div align="center">
+  ![Strategic Network Segmentation Diagram](diagrams/Strategic%20Network%20Segmentation.png)
+  *Lab network segmentation strategy showing isolated attack surface*
+</div>
 
 **Key Components:**
 - **VMnet8 (NAT)**: Internet access for Kali
