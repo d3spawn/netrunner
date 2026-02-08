@@ -15,24 +15,22 @@ Network Editor Actions:
 ### Evidence Gallery:
 
 #### 1. VMware Network Configuration
-
 <div align="center">
-  ![VMware Network Editor](screenshots/01-vmware-network-editor.png)
-  *VMnet1 and VMnet8 Network Modes*
+  ![VMware Network Editor](01-vmware-network-editor.png)
+  *VMware Virtual Network Editor showing VMnet1 and VMnet8 configuration*
 </div>
 
 #### 2. Subnet Settings
 <div align="center">
-  ![VMnet Subnet Settings](screenshots/02-vmnet-subnet-settings.png)
-  *VMnet1 and VMnet8 Subnets*
+  ![VMnet Subnet Settings](02-vmnet-subnet-settings.png)
+  *VMnet1 (192.168.56.0/24) and VMnet8 (192.168.32.0/24) subnet configurations*
 </div>
 
 #### 3. Kali VM Settings
 <div align="center">
-  ![Kali VM Configuration](path/to/the/dir)
-  *add somthing here*
+  ![Kali VM Configuration](03-kali-vm-settings.png)
+  *Kali Linux VM hardware configuration with dual network adapters*
 </div>
----
 
 ### 1.2 IP Address Planning
 
