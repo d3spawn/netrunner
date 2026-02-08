@@ -77,6 +77,7 @@
 
 *Click the image above to open interactive viewer with zoom, layers, and edit options*
 </div>
+
 **Design Features:**
 - ✅ Complete isolation from production networks
 - ✅ Dual-segment architecture for controlled testing
