@@ -82,3 +82,19 @@
 - ✅ Dual-segment architecture for controlled testing
 - ✅ No internet access for vulnerable target
 - ✅ Host system protected from lab traffic
+
+
+
+## Network Architecture
+
+View interactive diagram: **[network-topology.drawio](diagrams/network-topology.drawio)**
+
+GitHub will automatically show a preview with an "Edit" button that opens in Draw.io!
+
+
+## 🏗️ Network Architecture
+
+### Interactive Diagram
+[![Network Topology Preview](diagrams/network-topology.drawio)](diagrams/network-topology.drawio)
+
+*Click the preview above to view the interactive diagram in GitHub*
