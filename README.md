@@ -1,4 +1,4 @@
-# 🕶️ netrunner
+# 👹 netrunner
 
 **netrunner** is my personal cybersecurity portfolio.
 
