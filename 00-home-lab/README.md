@@ -45,7 +45,7 @@ Both perspectives are built on shared assumptions around isolation, scope, and a
 
 
 ## Getting Started
-1. **Begin with** `offensive-lab` for foundational attack simulation
+1. **Begin with** `offensive-lab/` for foundational attack simulation
 2. **Progress to** `defensive-lab/` for detection and response
 
 ## Skills Demonstrated
@@ -73,4 +73,5 @@ This lab exists solely for education, experimentation, and defensive security le
 This lab exists solely for security learning, experimentation, and defensive skill development.
 
 ---
+
 
