@@ -13,31 +13,6 @@ The focus of this repository is **learning by building** and **explaining decisi
 
 ---
 
-## 🧭 Home Lab
-
-The home lab forms the foundational environment for all practical work in the **netrunner** repository.
-
-It focuses on understanding **system behavior, network design, and security trade-offs** through deliberately constructed and isolated virtual environme
-
-00-home-lab/
-├── shared/ # Network assumptions, diagrams, scope
-├── offensive-lab/ # Attacker-focused workflows
-└── defensive-lab/ # Monitoring and analysis workflows
-
-
----
-
-## 🧠 Skills Demonstrated
-- Virtualization & network segmentation  
-- Security architecture thinking  
-- Controlled testing methodologies  
-- Technical documentation  
-- Ethical security practice  
-
-> *Building this lab taught me that security begins not with tools, but with boundaries.*
-
----
-
 ## ⚖️ Scope & Ethics
 
 All activities in this repository are performed exclusively within:
@@ -49,3 +24,4 @@ All activities in this repository are performed exclusively within:
 No testing is performed against real-world systems, networks, or data without explicit permission.  
 This repository exists solely for **security learning, experimentation, and defensive skill development**.
 
+--
