@@ -12,10 +12,18 @@ Network Editor Actions:
 3. Verify VMnet1 (Host-Only) exists with subnet 192.168.56.0/24
 4. Disable all other VMnets for lab isolation
 ```
+### Evidence Gallery:
 
-### Evidence to Capture:
-**(screenshots/01-vmware-network-editor.png)**
-**(screenshots/02-vmnet-subnet-settings.png)**
+#### 1. VMware Network Configuration
+![VMware Network Editor](screenshots/01-vmware-network-editor.png)
+
+#### 2. Subnet Settings
+![VMnet Subnet Settings](screenshots/02-vmnet-subnet-settings.png)
+
+#### 3. Kali VM Settings
+![Kali VM Configuration](screenshots/03-kali-vm-settings.png)
+
+---
 
 ### 1.2 IP Address Planning
 
