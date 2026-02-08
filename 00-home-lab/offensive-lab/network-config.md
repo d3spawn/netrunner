@@ -14,9 +14,8 @@ Network Editor Actions:
 ```
 
 ### Evidence to Capture:
-screenshots/01-vmware-network-editor.png
-screenshots/02-vmnet-subnet-settings.png
-
+**(screenshots/01-vmware-network-editor.png)**
+**(screenshots/02-vmnet-subnet-settings.png)**
 
 ### 1.2 IP Address Planning
 
