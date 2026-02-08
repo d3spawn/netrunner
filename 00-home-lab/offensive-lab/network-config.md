@@ -17,15 +17,15 @@ Network Editor Actions:
 
 ### 1. VMware Virtual Network Editor
 ![VMware Network Editor](screenshots/01-vmware-network-editor.png)
-*Figure 1: Configuring VMnet1 (Host-Only) and VMnet8 (NAT) networks*
+*Configuring VMnet1 (Host-Only) and VMnet8 (NAT) networks*
 
 ### 2. Subnet Settings
 ![Subnet Configuration](screenshots/02-vmnet-subnet-settings.png)
-*Figure 2: 192.168.56.0/24 (lab) and 192.168.32.0/24 (internet) subnets*
+*192.168.56.0/24 (lab) and 192.168.32.0/24 (internet) subnets*
 
 ### 3. Kali Linux VM Configuration
 ![Kali VM Settings](screenshots/03-kali-vm-settings.png)
-*Figure 3: Kali VM with dual network adapters for segmented testing*
+*Kali VM with dual network adapters for segmented testing*
 ### 1.2 IP Address Planning
 
 | Device          | Interface | Network             | IP Address      | Gateway     | Purpose         |
@@ -38,6 +38,7 @@ Network Editor Actions:
 ### 1.3 Network Architecture Overview
 
   ![Strategic Network Segmentation Diagram](diagrams/Strategic%20Network%20Segmentation.png)
+  
 
 **Key Components:**
 - **VMnet8 (NAT)**: Internet access for Kali
