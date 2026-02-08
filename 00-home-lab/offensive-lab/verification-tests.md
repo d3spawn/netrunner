@@ -80,5 +80,3 @@ nmap -sn 192.168.32.0/24
   "connectivity_verified": true,
   "security_controls_effective": true
 }
-
-
