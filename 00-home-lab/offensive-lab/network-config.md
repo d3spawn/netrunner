@@ -51,14 +51,6 @@
 *192.168.56.0/24 (lab) and 192.168.32.0/24 (internet) subnets*
 </div>
 
-### 3. Kali Linux VM Configuration
-<div align="center">
-  
-![Kali VM Settings](screenshots/03-kali-vm-settings.png)
-
-*Kali VM with dual network adapters for segmented testing*
-</div>
-
 ### 1.2 IP Address Planning
 
 | Device          | Interface | Network             | IP Address      | Gateway     | Purpose         |
