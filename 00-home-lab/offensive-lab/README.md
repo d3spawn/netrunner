@@ -25,7 +25,7 @@ A purpose-built virtual environment for practicing penetration testing methodolo
 ## 📁 Documentation Structure
 ```
 offensive-lab/
-├── **[README.md](README.md)**
+├── README.md
 ├── network-config.md
 ├── setup-guide.md
 ├── verification-tests.md
@@ -39,25 +39,25 @@ offensive-lab/
 ```markdown
 ## 🚀 Lab Build Process
 
-### **Phase 1: Planning & Design** 
-📋 **Document:** `network-config.md`
+### Phase 1: Planning & Design 
+📋 Document: `network-config.md`
 - Design network architecture
 - Plan IP addressing
 - Configure VMware virtual networks
 
-### **Phase 2: Implementation**
-🔧 **Document:** `setup-guide.md`
+### Phase 2: Implementation
+🔧 Document: `setup-guide.md`
 - Install Kali Linux VM
 - Deploy Metasploitable 2
 - Configure network interfaces
 
-### **Phase 3: Verification**
-✅ **Document:** `verification-tests.md`
+### Phase 3: Verification
+✅ Document: `verification-tests.md`
 - Test connectivity
 - Verify isolation
 - Confirm security controls
 
-### **Phase 4: Documentation**
+### Phase 4: Documentation**
 📸 **Folder:** `screenshots/`
 - Capture evidence
 - Document results
@@ -91,12 +91,3 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
-
-
-
-
-
-
-
-
-
