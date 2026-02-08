@@ -151,8 +151,6 @@ ping -c 2 8.8.8.8
 
 ## ✅ Phase 4: Lab Validation
 
-## ✅ Phase 4: Lab Validation
-
 ### 4.1 Connectivity Tests
 
 ```bash
@@ -193,6 +191,8 @@ nmap -sn 192.168.56.0/24
 - `screenshots/12-metasploitable-ping-failure.png`
 - `screenshots/13-nmap-scan-results.png`
 ---
+
+
 
 
 
