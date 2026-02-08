@@ -23,30 +23,18 @@ A purpose-built virtual environment for practicing penetration testing methodolo
 - **Audit Trail**: Comprehensive documentation and screenshots
 
 ## 📁 Documentation Structure
-
 ```tree
+
+```
 offensive-lab/
-├── 📄 [README.md](README.md)
-│   └── Overview and quick start guide
-│
-├── 🏗️ [network-config.md](network-config.md)
-│   └── Network architecture and IP planning
-│
-├── 🔧 [setup-guide.md](setup-guide.md)
-│   └── Step-by-step VM installation
-│
-├── ✅ [verification-tests.md](verification-tests.md)
-│   └── Lab validation procedures
-│
-└── 📸 [screenshots/](screenshots/)
-    └── Visual evidence repository
-        ├── setup/
-        │   ├── 01-vmware-network.png
-        │   ├── 02-kali-installation.png
-        │   └── ...
-        └── validation/
-            ├── net-001-kali-internet.png
-            └── ...
+├── [README.md](README.md)                    # Overview & quick start
+├── [network-config.md](network-config.md)    # Network architecture
+├── [setup-guide.md](setup-guide.md)          # VM installation guide
+├── [verification-tests.md](verification-tests.md) # Lab validation
+└── [screenshots/](screenshots/)              # Visual evidence
+    ├── setup/                  # Installation screenshots
+    └── validation/             # Test evidence
+```
 ```
 
 ## 📚 Documentation Guide
@@ -108,6 +96,7 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
 
