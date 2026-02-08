@@ -25,10 +25,12 @@ screenshots/02-vmnet-subnet-settings.png
 
 
 ### 1.2 IP Address Planning
-Device	Interface	Network	IP Address	Gateway	Purpose
-Kali Linux	eth0	VMnet8 (NAT)	192.168.32.128	192.168.32.2	Internet Access
-Kali Linux	eth1	VMnet1 (Host-Only)	192.168.56.128	N/A	Attack Traffic
-Metasploitable2	eth0	VMnet1 (Host-Only)	192.168.56.129	N/A	Vulnerable Target
+
+| Device          | Interface | Network             | IP Address      | Gateway     | Purpose         |
+|-----------------|-----------|---------------------|-----------------|-------------|-----------------|
+| Kali Linux      | eth0      | VMnet8 (NAT)        | 192.168.32.128  | 192.168.32.2| Internet Access |
+| Kali Linux      | eth1      | VMnet1 (Host-Only)  | 192.168.56.128  | N/A         | Attack Traffic  |
+| Metasploitable2 | eth0      | VMnet1 (Host-Only)  | 192.168.56.129  | N/A         | Vulnerable Target |
 
 ## 🖥️ Phase 2: Kali Linux Configuration
 ### 2.1 Virtual Machine Creation
