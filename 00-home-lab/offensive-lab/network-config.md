@@ -87,7 +87,7 @@
 
 ## Network Architecture
 
-View interactive diagram: **[network-topology.drawio](diagrams/network-topology.drawio)**
+View interactive diagram: **[network-topology.drawio](diagrams/Strategic-Network-Segmentation.drawio)**
 
 GitHub will automatically show a preview with an "Edit" button that opens in Draw.io!
 
@@ -95,6 +95,6 @@ GitHub will automatically show a preview with an "Edit" button that opens in Dra
 ## 🏗️ Network Architecture
 
 ### Interactive Diagram
-[![Network Topology Preview](diagrams/network-topology.drawio)](diagrams/network-topology.drawio)
+[![Network Topology Preview](diagrams/Strategic-Network-Segmentation.drawio)](diagrams/Strategic-Network-Segmentation.drawio)
 
 *Click the preview above to view the interactive diagram in GitHub*
