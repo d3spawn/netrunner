@@ -43,6 +43,23 @@ Both perspectives are built on shared assumptions around isolation, scope, and a
 ├── offensive-lab/ # Attacker-focused environment and workflows
 └── defensive-lab/ # Monitoring, logging, and analysis environment
 
+
+## Getting Started
+1. **Begin with** `offensive-lab/` for foundational attack simulation
+2. **Progress to** `defensive-lab/` for detection and response
+
+## Skills Demonstrated
+- Virtualization & Network Segmentation
+- Security Architecture Design
+- Controlled Testing Methodologies
+- Technical Documentation
+- Ethical Security Practice
+
+---
+
+*"Building this lab taught me that security begins not with tools, but with boundaries."*
+
+
 ## Scope & Ethics
 
 All activities in this home lab are performed exclusively within:
@@ -55,3 +72,4 @@ This lab exists solely for education, experimentation, and defensive security le
 
 This lab exists solely for security learning, experimentation, and defensive skill development.
 
+---
