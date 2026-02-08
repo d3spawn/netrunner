@@ -1,10 +1,28 @@
 
+## 🏠 Home Lab
 
-# Home Lab
+The home lab forms the foundational environment for all practical work in the **netrunner** repository.
 
-This home lab forms the foundational environment for all practical work in the **netrunner** repository.
+It focuses on understanding **system behavior, network design, and security trade-offs** through deliberately constructed and isolated virtual environme
 
-The lab focuses on understanding system behavior, network design, and security trade-offs through deliberately constructed and isolated virtual environments.
+## Structure
+00-home-lab/
+├── shared/ # Network topology, assumptions, and scope
+├── offensive-lab/ # Attacker-focused environment and workflows
+└── defensive-lab/ # Monitoring, logging, and analysis environment
+
+---
+
+## 🧠 Skills Demonstrated
+- Virtualization & network segmentation  
+- Security architecture thinking  
+- Controlled testing methodologies  
+- Technical documentation  
+- Ethical security practice  
+
+> *Building this lab taught me that security begins not with tools, but with boundaries.*
+
+---
 
 ## Objectives
 
@@ -13,52 +31,31 @@ The lab focuses on understanding system behavior, network design, and security t
 - Practice safe enumeration, exploitation, and detection techniques
 - Document architectural decisions and technical reasoning clearly
 
-## Lab Design
+---
+
+## 🧱 Lab Design Philosophy
 
 The home lab supports two complementary perspectives:
 
-- **Offensive lab** — focuses on attacker behavior against intentionally vulnerable systems
-- **Defensive lab** — focuses on visibility, logging, monitoring, and analysis
+- **Offensive Lab** — attacker behavior against intentionally vulnerable systems  
+- **Defensive Lab** — visibility, logging, monitoring, and analysis  
 
-Both perspectives are built on shared assumptions around isolation, scope, and authorization.
+Both are built on shared assumptions around **isolation, scope, and authorization**.
 
-
-### Core Design Principles
-
-- **Isolation First**  
+### Core Principles
+- 🔒 **Isolation First**  
   All lab environments are separated from production networks and personal data.
 
-- **Intentional Connectivity**  
-  Every network path, service exposure, and trust relationship is deliberate and documented.
+- 🔗 **Intentional Connectivity**  
+  Every network path and exposure exists for a specific reason.
 
-- **Reproducibility**  
-  Configurations and assumptions are recorded to allow consistent rebuilding and testing.
+- 🔁 **Reproducibility**  
+  Configurations are documented so the lab can be rebuilt consistently.
 
-- **Progressive Complexity**  
-  The lab evolves from basic setups to more complex scenarios as understanding improves.
-
-## Structure
-00-home-lab/
-├── shared/ # Network topology, assumptions, and scope
-├── offensive-lab/ # Attacker-focused environment and workflows
-└── defensive-lab/ # Monitoring, logging, and analysis environment
-
-
-## Getting Started
-1. **Begin with** `offensive-lab/` for foundational attack simulation
-2. **Progress to** `defensive-lab/` for detection and response
-
-## Skills Demonstrated
-- Virtualization & Network Segmentation
-- Security Architecture Design
-- Controlled Testing Methodologies
-- Technical Documentation
-- Ethical Security Practice
-
+- 📈 **Progressive Complexity**  
+  The lab evolves as understanding improves.
+  
 ---
-
-*"Building this lab taught me that security begins not with tools, but with boundaries."*
-
 
 ## Scope & Ethics
 
@@ -73,5 +70,6 @@ This lab exists solely for education, experimentation, and defensive security le
 This lab exists solely for security learning, experimentation, and defensive skill development.
 
 ---
+
 
 
