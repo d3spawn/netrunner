@@ -39,14 +39,26 @@ offensive-lab/
 | **[verification-tests.md](verification-tests.md)** | Validation procedures | Confirming lab functionality |
 | **[screenshots/](screenshots/)** | Visual evidence | Verifying setup steps |
 
-## 🚀 Quick Start Path
+## 🏗️ Build Workflow
+
 ```mermaid
-graph LR
-    A[Start Here] --> B[setup-guide.md]
-    B --> C[network-config.md]
-    C --> D[verification-tests.md]
-    D --> E[screenshots/]
-    E --> F[✅ Lab Ready!]
+graph TD
+    A[🎯 Start: Plan Architecture] --> B[📋 network-config.md]
+    B --> C{VMware Network Setup}
+    C --> D[✅ Configure VMnet1 & VMnet8]
+    D --> E[🔧 setup-guide.md]
+    E --> F[🖥️ Install Kali Linux]
+    E --> G[🎯 Deploy Metasploitable2]
+    F --> H[✅ verification-tests.md]
+    G --> H
+    H --> I[📸 screenshots/]
+    I --> J[🚀 Lab Ready for Practice]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style E fill:#f1f8e9
+    style H fill:#fff3e0
+    style J fill:#e8f5e8
 ```
 
 ## ⚠️ Legal & Ethical Notice
@@ -55,6 +67,7 @@ graph LR
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
 
