@@ -27,6 +27,4 @@ screenshots/02-vmnet-subnet-settings.png
 | Metasploitable2 | eth0      | VMnet1 (Host-Only)  | 192.168.56.129  | N/A         | Vulnerable Target |
 
 ### 1.3 Image Overview
-```text
-file from draw.io
-```
+<img width="321" height="711" alt="Strategic Network Segmentation png" src="https://github.com/user-attachments/assets/d9c4a597-5320-4adc-819e-284ea1fb00ff" />
