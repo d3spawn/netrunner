@@ -6,11 +6,12 @@ The home lab forms the foundational environment for all practical work in the **
 It focuses on understanding **system behavior, network design, and security trade-offs** through deliberately constructed and isolated virtual environme
 
 ## Structure
+```
 00-home-lab/
 ├── shared/ # Network topology, assumptions, and scope
 ├── offensive-lab/ # Attacker-focused environment and workflows
 └── defensive-lab/ # Monitoring, logging, and analysis environment
-
+```
 ---
 
 ## 🧠 Skills Demonstrated
@@ -70,6 +71,7 @@ This lab exists solely for education, experimentation, and defensive security le
 This lab exists solely for security learning, experimentation, and defensive skill development.
 
 ---
+
 
 
 
