@@ -34,35 +34,6 @@ offensive-lab/
 
 ## 📚 Documentation Guide
 
-### **More Detailed**
-
-```markdown
-### Phase 1: Planning & Design 
-📋 Document: **(network-config.md)**
-- Design network architecture
-- Plan IP addressing
-- Configure VMware virtual networks
-
-### Phase 2: Implementation
-🔧 Document: setup-guide.md
-- Install Kali Linux VM
-- Deploy Metasploitable 2
-- Configure network interfaces
-
-### Phase 3: Verification
-✅ Document: verification-tests.md
-- Test connectivity
-- Verify isolation
-- Confirm security controls
-
-### Phase 4: Documentation
-📸 Folder: screenshots/
-- Capture evidence
-- Document results
-- Create visual proof
-```
-**Tabular**
-
 | Document | Purpose | When to Use |
 |----------|---------|-------------|
 | **[network-config.md](network-config.md)** | Architecture & IP planning | Understanding lab design |
@@ -81,12 +52,11 @@ graph TD
 ```
 
 
-
-
 ## ⚠️ Legal & Ethical Notice
 > This lab exists solely for educational purposes within an isolated virtual environment. All documented activities are performed against intentionally vulnerable systems that have no connectivity to external networks. This lab follows responsible disclosure principles and ethical testing guidelines.
 
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
