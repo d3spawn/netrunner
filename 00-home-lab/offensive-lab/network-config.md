@@ -21,7 +21,7 @@ Network Editor Actions:
 ![VMnet Subnet Settings](screenshots/02-vmnet-subnet-settings.png)
 
 #### 3. Kali VM Settings
-![Kali VM Configuration](screenshots/03-kali-vm-settings.png)
+![Kali VM Configuration](path/to/the/dir)
 
 ---
 
@@ -34,6 +34,18 @@ Network Editor Actions:
 | Metasploitable2 | eth0      | VMnet1 (Host-Only)  | 192.168.56.129  | N/A         | Vulnerable Target |
 
 ### 1.3 Network Architecture Overview
-<img width="615" height="811" alt="Strategic Network Segmentation" src="https://github.com/user-attachments/assets/07590d53-bff5-485a-8f3a-cec19db4534f" />
+
+<div align="center">
+  
+![Strategic Network Segmentation](diagrams/Strategic%20Network%20Segmentation.png)
+
+*Figure 1: Lab network segmentation strategy showing isolated attack surface*
+</div>
+
+**Design Features:**
+- ✅ Complete isolation from production networks
+- ✅ Dual-segment architecture for controlled testing
+- ✅ No internet access for vulnerable target
+- ✅ Host system protected from lab traffic
 
 
