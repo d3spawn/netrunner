@@ -34,31 +34,29 @@ offensive-lab/
 
 ## 📚 Documentation Guide
 
-## **More Detailed**
+### **More Detailed**
 
 ```markdown
-## 🚀 Lab Build Process
-
 ### Phase 1: Planning & Design 
-📋 Document: `network-config.md`
+📋 Document: **(network-config.md)**
 - Design network architecture
 - Plan IP addressing
 - Configure VMware virtual networks
 
 ### Phase 2: Implementation
-🔧 Document: `setup-guide.md`
+🔧 Document: setup-guide.md
 - Install Kali Linux VM
 - Deploy Metasploitable 2
 - Configure network interfaces
 
 ### Phase 3: Verification
-✅ Document: `verification-tests.md`
+✅ Document: verification-tests.md
 - Test connectivity
 - Verify isolation
 - Confirm security controls
 
-### Phase 4: Documentation**
-📸 **Folder:** `screenshots/`
+### Phase 4: Documentation
+📸 Folder: screenshots/
 - Capture evidence
 - Document results
 - Create visual proof
@@ -91,3 +89,4 @@ graph TD
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
