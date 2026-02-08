@@ -26,5 +26,7 @@ screenshots/02-vmnet-subnet-settings.png
 | Kali Linux      | eth1      | VMnet1 (Host-Only)  | 192.168.56.128  | N/A         | Attack Traffic  |
 | Metasploitable2 | eth0      | VMnet1 (Host-Only)  | 192.168.56.129  | N/A         | Vulnerable Target |
 
-### 1.3 Image Overview
-<img width="321" height="711" alt="Strategic Network Segmentation png" src="https://github.com/user-attachments/assets/d9c4a597-5320-4adc-819e-284ea1fb00ff" />
+### 1.3 Network Architecture Overview
+<img width="615" height="811" alt="Strategic Network Segmentation" src="https://github.com/user-attachments/assets/07590d53-bff5-485a-8f3a-cec19db4534f" />
+
+
