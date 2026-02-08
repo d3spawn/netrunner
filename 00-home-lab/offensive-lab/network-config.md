@@ -35,17 +35,14 @@ Network Editor Actions:
 
 ### 1.3 Network Architecture Overview
 
-<div align="center">
-  
-![Strategic Network Segmentation](diagrams/Strategic%20Network%20Segmentation.png)
+### 1.3 Network Architecture Overview
 
-*Figure 1: Lab network segmentation strategy showing isolated attack surface*
-</div>
+![Strategic Network Segmentation Diagram](diagrams/Strategic%20Network%20Segmentation.png)
 
-**Design Features:**
-- ✅ Complete isolation from production networks
-- ✅ Dual-segment architecture for controlled testing
-- ✅ No internet access for vulnerable target
-- ✅ Host system protected from lab traffic
+**Key Components:**
+- **VMnet8 (NAT)**: Internet access for Kali
+- **VMnet1 (Host-Only)**: Isolated attack network
+- **Dual-Homed Kali**: Connects to both segments
+- **Isolated Target**: No external connectivity
 
 
