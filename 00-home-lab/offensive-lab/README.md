@@ -30,11 +30,24 @@ offensive-lab/
 ├── screenshots/ # Evidence repository
 └── README.md # This file
 
+## 📚 Documentation Guide
 
-## 🚀 Quick Start
-1. Review `setup-guide.md` for lab construction
-2. Validate with `verification-tests/` procedures
-3. Begin exploration with basic network enumeration
+| Document | Purpose | When to Use |
+|----------|---------|-------------|
+| **[setup-guide.md](setup-guide.md)** | Step-by-step installation | First-time setup or VM recreation |
+| **[network-config.md](network-config.md)** | Architecture & IP planning | Understanding lab design |
+| **[verification-tests.md](verification-tests.md)** | Validation procedures | Confirming lab functionality |
+| **[screenshots/](screenshots/)** | Visual evidence | Verifying setup steps |
+
+## 🚀 Quick Start Path
+```mermaid
+graph LR
+    A[Start Here] --> B[setup-guide.md]
+    B --> C[network-config.md]
+    C --> D[verification-tests.md]
+    D --> E[screenshots/]
+    E --> F[✅ Lab Ready!]
+```
 
 ## ⚠️ Legal & Ethical Notice
 > This lab exists solely for educational purposes within an isolated virtual environment. All documented activities are performed against intentionally vulnerable systems that have no connectivity to external networks. This lab follows responsible disclosure principles and ethical testing guidelines.
@@ -42,5 +55,6 @@ offensive-lab/
 ---
 
 *"The most secure lab is one that's intentionally vulnerable in the right places."*
+
 
 
