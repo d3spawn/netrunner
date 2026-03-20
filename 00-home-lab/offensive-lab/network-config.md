@@ -78,20 +78,22 @@
 
 
 ---
+## 🚨 Issue: Host machine could ping Metasploitable (security risk)
 
+**🔧 Fix:** Disabled host virtual adapter for VMnet1 in VMware Network Editor
 
-## 🎓 Lesson: Verify Network Isolation
+---
 
-**Issue:** Host machine could ping Metasploitable (security risk)
+<div align="center">
+  <img src="screenshots/net-004-fix.png" alt="VMware Network Editor Fix" width="600">
+  <br>
+  <em>Disabling host virtual adapter for VMnet1 in VMware Network Editor</em>
+</div>
 
-**Fix:** Disabled host virtual adapter for VMnet1 in VMware Network Editor
+---
 
-**Result:** Host now cannot access lab network; proper isolation achieved
+## 🎓 Lesson Learned: Verify Network Isolation
 
-| Status | Evidence |
-|--------|----------|
-| **Before Fix (FAIL)** | [`net-004-failure.png`](screenshots/net-004-failure.png) - Host pinging Metasploitable |
-| **The Fix** | [`net-004-fix.png`](screenshots/net-004-fix.png) - VMware Network Editor with VMnet1 unchecked |
-| **After Fix (PASS)** | [`net-004-fixed.png`](screenshots/net-004-fixed.png) - Host ping timeout |
+**📊 Result:** Host now cannot access lab network; proper isolation achieved
 
-> *"Trust, but verify—always test isolation boundaries with ping commands."*
+> *"Isolation isn't automatic—you must verify it. A simple ping test from host to target should always fail in a properly configured security lab."*
