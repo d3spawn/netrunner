@@ -1,22 +1,26 @@
 # Offensive Lab Network Validation
 
 ## 🎯 Purpose
-To verify and document that the lab network operates as designed, with proper isolation and connectivity.
+Verify that the lab network operates as designed with proper isolation and connectivity.
+
+---
 
 ## 📊 Test Matrix
-| Test ID | Test Description | Expected Result | Status | Evidence |
-|---------|-----------------|-----------------|--------|----------|
+
+| Test ID | Description | Expected | Status | Evidence |
+|---------|-------------|----------|--------|----------|
 | NET-001 | Kali internet access | Success | ✅ | [![Screenshot](screenshots/net-001.png)](screenshots/net-001.png) |
 | NET-002 | Kali → Metasploitable | Success | ✅ | [![Screenshot](screenshots/net-002.png)](screenshots/net-002.png) |
 | NET-003 | Metasploitable → Internet | Failure | ✅ | [![Screenshot](screenshots/net-003.png)](screenshots/net-003.png) |
 | NET-004 | Host → Metasploitable | Failure | ✅ | [![Screenshot](screenshots/net-004.png)](screenshots/net-004.png) |
-| NET-005 | Network isolation scan | 2 hosts only | ✅ | [![Screenshot](screenshots/net-005.png)](screenshots/net-005.png) |
+| NET-005 | Network isolation scan | 2 lab VMs | ✅ | [![Screenshot](screenshots/net-005.png)](screenshots/net-005.png) |
 
-## 🔍 Detailed Test Procedures
+---
 
-### Test NET-001: Kali Internet Connectivity
+## 🔍 Test Procedures
+
+### NET-001: Kali Internet Connectivity
 ```bash
-# Execute from Kali terminal
 ping -c 4 8.8.8.8
 curl -I https://google.com
 sudo apt update | head -5
@@ -28,12 +32,12 @@ sudo apt update | head -5
 ```bash
 # Execute from Kali terminal
 ping -c 4 192.168.56.129
-traceroute 192.138.56.129
+traceroute 192.168.56.129
 nmap -Pn 192.168.56.129 --top-ports 10 
 
 # Success Criteria:
 # Ping: 0% packet loss
-# Nmap: Shows at least 10 open ports
+# Nmap: Shows open ports
 # Traceroute: Direct connection (1 hop)
 ```
 
@@ -81,28 +85,29 @@ VMnet8: Kali (192.168.32.128) accessible
 
 ### Results NET-005:
 
-| Network | IP Address | Device | Status |
-|---------|------------|--------|--------|
-| **VMnet1 (192.168.56.0/24)** | 192.168.56.1 | VMware virtual adapter | Expected |
-| | 192.168.56.128 | Kali | ✅ Present |
-| | 192.168.56.129 | Metasploitable | ✅ Present |
+| Network | IP | Device | Status |
+|---------|-----|--------|--------|
+| **VMnet1** | 192.168.56.1 | VMware adapter | Expected |
+| | 192.168.56.128 | Kali | ✅ |
+| | 192.168.56.129 | Metasploitable | ✅ |
 | | 192.168.56.254 | VMware DHCP | Expected |
-| **VMnet8 (192.168.32.0/24)** | 192.168.32.1 | VMware gateway | Expected |
+| **VMnet8** | 192.168.32.1 | VMware gateway | Expected |
 | | 192.168.32.2 | VMware NAT | Expected |
-| | 192.168.32.128 | Kali | ✅ Present |
+| | 192.168.32.128 | Kali | ✅ |
 | | 192.168.32.254 | VMware | Expected |
 ```
 
 ```
 
-# Result Summary 
-{
-  "test_date": "21-03-2026",
-  "tester": "Divyanshu Gautam",
-  "environment": "Offensive Security Lab v1.0",
-  "tests_performed": 5,
-  "tests_passed": 5,
-  "isolation_verified": true,
-  "connectivity_verified": true,
-  "security_controls_effective": true
-}
+## 📈 Results Summary
+
+| Metric | Value |
+|--------|-------|
+| Test Date | 21-03-2026 |
+| Tester | Divyanshu Gautam |
+| Environment | Offensive Security Lab v1.0 |
+| Tests Performed | 5 |
+| Tests Passed | 5 |
+| Isolation Verified | ✅ |
+| Connectivity Verified | ✅ |
+| Security Controls | Effective |
