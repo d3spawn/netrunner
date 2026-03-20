@@ -52,7 +52,14 @@ curl --max-time 5 http://example.com
 ping 192.168.56.129
 traceroute 192.168.56.129
 # Success Criteria: No response from Metasploitable IP
+
+
 ```
+| Screenshot | Name | Description |
+|------------|------|-------------|
+| Before fix | `net-004-failure.png` | Host pinging Metasploitable (FAIL) |
+| The fix | `net-004-fix.png` | VMware Network Editor with VMnet1 unchecked |
+| After fix | `net-004-fixed.png` | Host ping timeout (PASS) |
 
 ### Test NET-005: Network Segment Purity
 ```bash
@@ -71,7 +78,7 @@ VMnet1: Kali (192.168.56.128) + Metasploitable (192.168.56.129)
 VMnet8: Kali (192.168.32.128) accessible
 ```
 
-### Results:
+### Results NET-005:
 
 | Network | IP Address | Device | Status |
 |---------|------------|--------|--------|
@@ -84,6 +91,8 @@ VMnet8: Kali (192.168.32.128) accessible
 | | 192.168.32.128 | Kali | ✅ Present |
 | | 192.168.32.254 | VMware | Expected |
 ```
+
+
 
 
 ## Result Summary 
