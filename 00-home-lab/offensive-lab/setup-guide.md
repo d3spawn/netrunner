@@ -66,6 +66,8 @@ ip route
 ```bash
 # Download Metasploitable2 from the official source
 wget https://downloads.metasploit.com/data/metasploitable/metasploitable-linux-2.0.0.zip
+# OR
+curl -O https://downloads.metasploit.com/data/metasploitable/metasploitable-linux-2.0.0.zip
 
 # Verify SHA256 hash
 sha256sum metasploitable-linux-2.0.0.zip
