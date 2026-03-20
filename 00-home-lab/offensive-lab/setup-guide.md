@@ -24,23 +24,21 @@
 
 ### 1.2 Installation Process
 
-- Boot from the Kali Linux ISO  
-- Select **Graphical Install**
+1. Boot from Kali ISO → Select **Graphical Install**
 
 **Installation choices:**
 - **Language:** English (United States)
-- **Network configuration:**
-  - Hostname: `kali`
-  - Domain: `lab.local` (or leave blank)
-- **Partitioning:** Use entire disk → All files in one partition
-- **Bootloader:** Install GRUB to the master boot record
+- **Hostname:** `kali`
+- **Domain:** `lab.local` (or leave blank)
+- **Partitioning:** Use entire disk
+- **Bootloader:** Install GRUB to master boot record
 
 ---
 
 ### Evidence to Capture
 
 <div align="center">
-  <img src="screenshots/03-kali-vm-settings.png" alt="Kali VM Settings">
+  <img src="screenshots/03-kali-vm-settings.png" alt="Kali VM Settings" width="600">
   <br>
   <em>VM configuration with 4GB RAM, 2 CPU cores, and dual network adapters</em>
 </div>
@@ -48,7 +46,7 @@
 <br>
 
 <div align="center">
-  <img src="screenshots/04-kali-install-start.png" alt="Kali Installation Start">
+  <img src="screenshots/04-kali-install-start.png" alt="Kali Installation Start" width="600">
   <br>
   <em>Kali Linux boot menu - selecting Graphical Install</em>
 </div>
@@ -56,7 +54,7 @@
 <br>
 
 <div align="center">
-  <img src="screenshots/05-kali-partitioning.png" alt="Kali Partitioning">
+  <img src="screenshots/05-kali-partitioning.png" alt="Kali Partitioning" width="600">
   <br>
   <em>Disk partitioning selection - using entire disk</em>
 </div>
@@ -64,38 +62,37 @@
 <br>
 
 <div align="center">
-  <img src="screenshots/06-kali-installation-progress.png" alt="Kali Installation Progress">
+  <img src="screenshots/06-kali-installation-progress.png" alt="Kali Installation Progress" width="600">
   <br>
-  <em>Installation in progress - extracting and installing packages</em>
+  <em>Installation in progress - extracting packages</em>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="screenshots/07-kali-installation-complete.png" alt="Kali Installation Complete">
+  <img src="screenshots/07-kali-installation-complete.png" alt="Kali Installation Complete" width="600">
   <br>
   <em>Installation finished with GRUB bootloader installed</em>
 </div>
 
-<br>
 ---
 
 ### 1.3 Post-Installation Configuration
 
-After installation, update the system and verify networking:
+Update the system and verify networking:
 
 ```bash
 # Update system packages
 sudo apt update && sudo apt upgrade -y
-### Verification
-```bash
+
+# Verify network interfaces
 ip a
 ip route
 ```
 
 ### Evidence to Capture
 <div align="center">
-  <img src="screenshots/08-kali-network-config.png" alt="Kali Network Configuration">
+  <img src="screenshots/08-kali-network-config.png" alt="Kali Network Configuration" width="600">
   <br>
   <em>`ip a` and `ip route` output showing eth0 (NAT: 192.168.32.128) and eth1 (Host-Only: 192.168.56.128)</em>
 </div>
@@ -154,7 +151,7 @@ ping -c 4 8.8.8.8
 ```
 
 <div align="center">
-  <img src="screenshots/09-metasploitable-import.png" alt="Metasploitable Import">
+  <img src="screenshots/09-metasploitable-import.png" alt="Metasploitable Import" width="600">
   <br>
   <em>Metasploitable VM imported into VMware with Host-Only network adapter</em>
 </div>
@@ -162,7 +159,7 @@ ping -c 4 8.8.8.8
 <br>
 
 <div align="center">
-  <img src="screenshots/10-metasploitable-network-config.png" alt="Metasploitable Network Config">
+  <img src="screenshots/10-metasploitable-network-config.png" alt="Metasploitable Network Config" width="600">
   <br>
   <em>`ifconfig` output showing single interface at 192.168.56.129</em>
 </div>
@@ -170,7 +167,7 @@ ping -c 4 8.8.8.8
 <br>
 
 <div align="center">
-  <img src="screenshots/11-metasploitable-no-internet.png" alt="Metasploitable No Internet">
+  <img src="screenshots/11-metasploitable-no-internet.png" alt="Metasploitable No Internet" width="600">
   <br>
   <em>`ping 8.8.8.8` fails - confirming no internet access (isolation working)</em>
 </div>
