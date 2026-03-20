@@ -8,18 +8,17 @@
 
 ---
 
-## 🖥️ Phase 1: Kali Linux Configuration
+## 🖥️ Phase 1: Kali Linux Setup
 
-### 1.1 Virtual Machine Creation
+### 1.1 Virtual Machine Configuration
 
-**VM Settings:**
-- Name: `kali`
-- OS: Linux → Debian 11.x 64-bit
-- RAM: 4096 MB
-- Processors: 2
-- Disk: 50 GB (split virtual disk)
-- Network Adapter 1: NAT (VMnet8)
-- Network Adapter 2: Host-Only (VMnet1)
+| Component | Configuration |
+|-----------|---------------|
+| **OS** | Debian 11.x (64-bit) |
+| **RAM** | 4096 MB |
+| **CPU** | 2 cores |
+| **Disk** | 50 GB (split) |
+| **Network Adapter** | NAT + Host-Only |
 
 ---
 
@@ -34,28 +33,51 @@
   - Hostname: `kali`
   - Domain: `lab.local` (or leave blank)
 - **Partitioning:** Use entire disk → All files in one partition
-- **User setup:** Create a low-privilege user for daily use
 - **Bootloader:** Install GRUB to the master boot record
 
 ---
 
 ### Evidence to Capture
 
-![Kali VM Settings](screenshots/03-kali-vm-settings.png)
-*VM configuration with 4GB RAM, 2 CPU cores, and dual network adapters*
+<div align="center">
+  <img src="screenshots/03-kali-vm-settings.png" alt="Kali VM Settings">
+  <br>
+  <em>VM configuration with 4GB RAM, 2 CPU cores, and dual network adapters</em>
+</div>
 
-![Kali Installation Start](screenshots/04-kali-install-start.png)
-*Kali Linux boot menu - selecting Graphical Install*
+<br>
 
-![Kali Partitioning](screenshots/05-kali-partitioning.png)
-*Disk partitioning selection - using entire disk*
+<div align="center">
+  <img src="screenshots/04-kali-install-start.png" alt="Kali Installation Start">
+  <br>
+  <em>Kali Linux boot menu - selecting Graphical Install</em>
+</div>
 
-![Kali Installation Progress](screenshots/06-kali-installation-progress.png)
-*Installation in progress - extracting and installing packages*
+<br>
 
-![Kali Installation Complete](screenshots/07-kali-installation-complete.png)
-*Installation finished with GRUB bootloader installed*
+<div align="center">
+  <img src="screenshots/05-kali-partitioning.png" alt="Kali Partitioning">
+  <br>
+  <em>Disk partitioning selection - using entire disk</em>
+</div>
 
+<br>
+
+<div align="center">
+  <img src="screenshots/06-kali-installation-progress.png" alt="Kali Installation Progress">
+  <br>
+  <em>Installation in progress - extracting and installing packages</em>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="screenshots/07-kali-installation-complete.png" alt="Kali Installation Complete">
+  <br>
+  <em>Installation finished with GRUB bootloader installed</em>
+</div>
+
+<br>
 ---
 
 ### 1.3 Post-Installation Configuration
@@ -72,9 +94,13 @@ ip route
 ```
 
 ### Evidence to Capture
+<div align="center">
+  <img src="screenshots/08-kali-network-config.png" alt="Kali Network Configuration">
+  <br>
+  <em>`ip a` and `ip route` output showing eth0 (NAT: 192.168.32.128) and eth1 (Host-Only: 192.168.56.128)</em>
+</div>
 
-![Kali Network Configuration](screenshots/08-kali-network-config.png)
-*`ip a` and `ip route` output showing eth0 (NAT: 192.168.32.128) and eth1 (Host-Only: 192.168.56.128)*
+<br>
 
 ---
 
@@ -127,15 +153,28 @@ ifconfig
 ping -c 4 8.8.8.8
 ```
 
-### Evidence to Capture
-![Metasploitable Import](screenshots/09-metasploitable-import.png)
-*Metasploitable VM imported into VMware with Host-Only network adapter*
+<div align="center">
+  <img src="screenshots/09-metasploitable-import.png" alt="Metasploitable Import">
+  <br>
+  <em>Metasploitable VM imported into VMware with Host-Only network adapter</em>
+</div>
 
-![Metasploitable Network Config](screenshots/10-metasploitable-network-config.png)
-*`ifconfig` output showing single interface at 192.168.56.129*
+<br>
 
-![Metasploitable No Internet](screenshots/11-metasploitable-no-internet.png)
-*`ping 8.8.8.8` fails - confirming no internet access (isolation working)*
+<div align="center">
+  <img src="screenshots/10-metasploitable-network-config.png" alt="Metasploitable Network Config">
+  <br>
+  <em>`ifconfig` output showing single interface at 192.168.56.129</em>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="screenshots/11-metasploitable-no-internet.png" alt="Metasploitable No Internet">
+  <br>
+  <em>`ping 8.8.8.8` fails - confirming no internet access (isolation working)</em>
+</div>
+
 
 ---
 
