@@ -1,16 +1,17 @@
+# 🏠 Home Lab
 
-## 🏠 Home Lab
+The home lab serves as the foundational environment for all practical work in the **netrunner** repository. It focuses on understanding system behavior, network design, and security trade-offs through deliberately constructed virtual environments.
 
-The home lab forms the foundational environment for all practical work in the **netrunner** repository.
+---
 
-It focuses on understanding **system behavior, network design, and security trade-offs** through deliberately constructed and isolated virtual environme
+## 📁 Structure
+
 
 ## Structure
 ```
 00-home-lab/
-├── shared/              # Network topology, assumptions, and scope
-├── offensive-lab/       # Attacker-focused environment and workflows
-└── defensive-lab/       # Monitoring, logging, and analysis environment
+├── offensive-lab/       # Attacker-focused environment and workflows (Kali + Metasploitable)
+└── defensive-lab/       # Monitoring, logging, and analysis environment (planned - FLARE-VM, REMnux)
 ```
 ---
 
@@ -36,25 +37,23 @@ It focuses on understanding **system behavior, network design, and security trad
 
 ## 🧱 Lab Design Philosophy
 
-The home lab supports two complementary perspectives:
+The lab is built around two complementary perspectives:
 
-- **Offensive Lab** — attacker behavior against intentionally vulnerable systems  
-- **Defensive Lab** — visibility, logging, monitoring, and analysis  
+| Perspective | Focus | Status |
+|-------------|-------|--------|
+| **Offensive Lab** | Attacker behavior on intentionally vulnerable systems | ✅ Complete |
+| **Defensive Lab** | Visibility, logging, and analysis (FLARE-VM, REMnux) | ⏳ Planned (hardware constraints) 
 
 Both are built on shared assumptions around **isolation, scope, and authorization**.
 
 ### Core Principles
-- 🔒 **Isolation First**  
-  All lab environments are separated from production networks and personal data.
 
-- 🔗 **Intentional Connectivity**  
-  Every network path and exposure exists for a specific reason.
-
-- 🔁 **Reproducibility**  
-  Configurations are documented so the lab can be rebuilt consistently.
-
-- 📈 **Progressive Complexity**  
-  The lab evolves as understanding improves.
+| Principle | Description |
+|-----------|-------------|
+| 🔒 **Isolation First** | All lab environments separated from production networks |
+| 🔗 **Intentional Connectivity** | Every network path exists for a specific reason |
+| 🔁 **Reproducibility** | Full documentation for consistent rebuilds |
+| 📈 **Progressive Complexity** | Lab evolves as understanding improves |
   
 ---
 
@@ -65,10 +64,8 @@ All activities in this home lab are performed exclusively within:
 - Intentionally vulnerable machines
 - Authorized training or challenge platforms
 
-No testing is performed against real-world systems, networks, or data without explicit permission. 
-This lab exists solely for education, experimentation, and defensive security learning.
-
-This lab exists solely for security learning, experimentation, and defensive skill development.
+> **⚠️ Educational Use Only**  
+> This lab is strictly for learning. All testing is contained within isolated virtual environments. No real-world systems, networks, or data are ever targeted without explicit authorization.
 
 ---
 
