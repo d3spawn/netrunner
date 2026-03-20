@@ -69,6 +69,7 @@ nmap -sn 192.168.32.0/24
 # Expected Result:
 VMnet1: Kali (192.168.56.128) + Metasploitable (192.168.56.129)
 VMnet8: Kali (192.168.32.128) accessible
+```
 
 ### Results:
 
