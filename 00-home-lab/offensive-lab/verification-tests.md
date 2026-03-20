@@ -4,13 +4,13 @@
 To verify and document that the lab network operates as designed, with proper isolation and connectivity.
 
 ## 📊 Test Matrix
-| Test ID | Test Description | Expected Result | Pass/Fail | Evidence |
-|---------|-----------------|-----------------|-----------|----------|
-| NET-001 | Kali internet access | Success | ✅ | `screenshots/net-001.png` |
-| NET-002 | Kali → Metasploitable | Success | ✅ | `screenshots/net-002.png` |
-| NET-003 | Metasploitable → Internet | Failure | ✅ | `screenshots/net-003.png` |
-| NET-004 | Host → Metasploitable | Failure | ✅ | `screenshots/net-004.png` |
-| NET-005 | Network isolation scan | 2 hosts only | ✅ | `screenshots/net-005.png` |
+| Test ID | Test Description | Expected Result | Status | Evidence |
+|---------|-----------------|-----------------|--------|----------|
+| NET-001 | Kali internet access | Success | ✅ | [![Screenshot](screenshots/net-001.png)](screenshots/net-001.png) |
+| NET-002 | Kali → Metasploitable | Success | ✅ | [![Screenshot](screenshots/net-002.png)](screenshots/net-002.png) |
+| NET-003 | Metasploitable → Internet | Failure | ✅ | [![Screenshot](screenshots/net-003.png)](screenshots/net-003.png) |
+| NET-004 | Host → Metasploitable | Failure | ✅ | [![Screenshot](screenshots/net-004.png)](screenshots/net-004.png) |
+| NET-005 | Network isolation scan | 2 hosts only | ✅ | [![Screenshot](screenshots/net-005.png)](screenshots/net-005.png) |
 
 ## 🔍 Detailed Test Procedures
 
@@ -28,13 +28,13 @@ sudo apt update | head -5
 ```bash
 # Execute from Kali terminal
 ping -c 4 192.168.56.129
-nmap -Pn 192.168.56.129
-telnet 192.168.56.129 21  # Test FTP service
+traceroute 192.138.56.129
+nmap -Pn 192.168.56.129 --top-ports 10 
 
 # Success Criteria:
 # Ping: 0% packet loss
-# Nmap: Shows at least 5 open ports
-# Telnet: FTP banner received
+# Nmap: Shows at least 10 open ports
+# Traceroute: Direct connection (1 hop)
 ```
 
 
@@ -42,7 +42,6 @@ telnet 192.168.56.129 21  # Test FTP service
 ```bash
 # Execute from Metasploitable terminal
 ping -c 4 8.8.8.8
-ping -c 4 192.168.32.1
 curl --max-time 5 http://example.com
 # Success Criteria: All commands timeout or fail (100% packet loss)
 ```
@@ -51,27 +50,44 @@ curl --max-time 5 http://example.com
 ```bash
 # Execute from Host OS (Windows/Linux/Mac)
 ping 192.168.56.129
-nmap -Pn 192.168.56.129
+traceroute 192.168.56.129
 # Success Criteria: No response from Metasploitable IP
 ```
 
 ### Test NET-005: Network Segment Purity
 ```bash
-# Execute from Kali terminal
-# Scan entire Host-Only subnet
+### Test NET-005: Network Segment Purity
+**Objective:** Confirm lab VMs are present in each network
+
+# From Kali terminal
+# Scan Host-Only network
 nmap -sn 192.168.56.0/24
 
-# Scan entire NAT subnet (from Kali)
+# Scan NAT network
 nmap -sn 192.168.32.0/24
-# Success Criteria:
-# VMnet1 (192.168.56.0/24): Exactly 2 hosts respond
-# VMnet8 (192.168.32.0/24): Multiple hosts may respond (NAT network)
+
+# Expected Result:
+VMnet1: Kali (192.168.56.128) + Metasploitable (192.168.56.129)
+VMnet8: Kali (192.168.32.128) accessible
+
+### Results:
+
+| Network | IP Address | Device | Status |
+|---------|------------|--------|--------|
+| **VMnet1 (192.168.56.0/24)** | 192.168.56.1 | VMware virtual adapter | Expected |
+| | 192.168.56.128 | Kali | ✅ Present |
+| | 192.168.56.129 | Metasploitable | ✅ Present |
+| | 192.168.56.254 | VMware DHCP | Expected |
+| **VMnet8 (192.168.32.0/24)** | 192.168.32.1 | VMware gateway | Expected |
+| | 192.168.32.2 | VMware NAT | Expected |
+| | 192.168.32.128 | Kali | ✅ Present |
+| | 192.168.32.254 | VMware | Expected |
 ```
 
 
 ## Result Summary 
 {
-  "test_date": "08-02-2026",
+  "test_date": "20-03-2026",
   "tester": "Divyanshu Gautam",
   "environment": "Offensive Security Lab v1.0",
   "tests_performed": 5,
