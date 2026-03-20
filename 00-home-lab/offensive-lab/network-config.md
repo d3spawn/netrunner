@@ -88,4 +88,10 @@
 
 **Result:** Host now cannot access lab network; proper isolation achieved
 
+| Status | Evidence |
+|--------|----------|
+| **Before Fix (FAIL)** | [`net-004-failure.png`](screenshots/net-004-failure.png) - Host pinging Metasploitable |
+| **The Fix** | [`net-004-fix.png`](screenshots/net-004-fix.png) - VMware Network Editor with VMnet1 unchecked |
+| **After Fix (PASS)** | [`net-004-fixed.png`](screenshots/net-004-fixed.png) - Host ping timeout |
+
 > *"Trust, but verify—always test isolation boundaries with ping commands."*
