@@ -69,7 +69,7 @@ traceroute 192.168.56.129
 ### Test NET-005: Network Segment Purity
 ```bash
 ### Test NET-005: Network Segment Purity
-**Objective:** Confirm lab VMs are present in each network
+Objective: Confirm lab VMs are present in each network
 
 # From Kali terminal
 # Scan Host-Only network
