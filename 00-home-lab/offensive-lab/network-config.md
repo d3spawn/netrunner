@@ -75,3 +75,17 @@
 - ✅ Dual-segment architecture for controlled testing
 - ✅ No internet access for vulnerable target
 - ✅ Host system protected from lab traffic
+
+
+---
+
+
+## 🎓 Lesson: Verify Network Isolation
+
+**Issue:** Host machine could ping Metasploitable (security risk)
+
+**Fix:** Disabled host virtual adapter for VMnet1 in VMware Network Editor
+
+**Result:** Host now cannot access lab network; proper isolation achieved
+
+> *"Trust, but verify—always test isolation boundaries with ping commands."*
