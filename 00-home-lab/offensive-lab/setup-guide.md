@@ -37,8 +37,10 @@ VM Settings:
 ### Evidence to Capture
 
 - `screenshots/03-kali-vm-settings.png`
-- `screenshots/04-kali-installation-progress.png`
-- `screenshots/05-kali-installation-complete.png`
+- `screenshots/04-kali-install-start.png`
+- `screenshots/05-kali-partitioning`
+- `screenshots/06-kali-installation-progress`
+- `screenshots/07-kali-installation-complete.png`
 
 ---
 ### 1.3 Post-Installation Configuration
@@ -56,7 +58,7 @@ ip route
 ```
 
 ### Evidence to Capture
-- `screenshots/06-kali-network-config.png`
+- `screenshots/08-kali-network-config.png`
 ---
 
 ## 🎯 Phase 2: Metasploitable 2 Deployment
@@ -104,13 +106,13 @@ ifconfig
 # Expected: only one interface with IP 192.168.56.129
 
 # Attempt internet connectivity (should fail)
-ping -c 2 8.8.8.8
+ping -c 4 8.8.8.8
 ```
 
 ### Evidence to Capture
-- screenshots/08-metasploitable-import.png
-- screenshots/09-metasploitable-network-config.png
-- screenshots/10-metasploitable-no-internet.png
+- `screenshots/09-metasploitable-import.png`
+- `screenshots/10-metasploitable-network-config.png`
+- `screenshots/11-metasploitable-no-internet.png`
 
 ---
 
