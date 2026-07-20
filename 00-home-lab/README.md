@@ -6,8 +6,6 @@ The home lab serves as the foundational environment for all practical work in th
 
 ## 📁 Structure
 
-
-## Structure
 ```
 00-home-lab/
 ├── offensive-lab/       # Attacker-focused environment and workflows (Kali + Metasploitable)
