@@ -87,10 +87,10 @@ done
 ![Cookie Inspection](screenshots/support/5-cookie-inspection.png)
 
 **Result:**
-
+```
 md5("false") = 68934a3e9455fa72420237eb0590232 <- default/unauthenticated value
 md5("true") = b326b5062b2f0e69046810717534cb09 <- target value
-
+```
 **Exploitation:** The application set `isITUser` to `md5("false")` by default for a regular logged-in user. Forging the cookie value to `b326b5062b2f0e69046810717534cb09` (`md5("true")`) unlocked the **IT Admin Panel**.
 
 ![Forged Cookie](screenshots/support/6-forged-cookie.png)
@@ -179,16 +179,16 @@ hydra -l specialadmin@support.thm -P mutated.txt \
 As admin, a new Date/Time feature appeared in the footer, sending POST requests with a `sys` parameter.
 
 **Initial Test:**
-
+```
 sys=date; pwd
-
+```
 **Response:** `/var/www/html` — command injection confirmed.
 ![Command Injection Test](screenshots/support/15-command-injection-test.png)
 
 **Flag Retrieval:**
-
+```
 sys=date; cat /home/ubuntu/user.txt
-
+```
 **Flag 2 Captured!** 🚩 `THM{GOT_THE_FLAG001}`
 ![Flag 2](screenshots/support/16-flag2.png)
 
