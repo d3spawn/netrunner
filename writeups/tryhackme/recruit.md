@@ -52,11 +52,16 @@ gobuster dir -u http://<TARGET> -w <WORDLIST>
 **Discovered:**
 /mail
 /assets
+/javascript
 /phpmyadmin
+/server-status
 
 **`/mail` directory findings:**
 - HR username: `hr`
 - Reference to `config.php` — visiting it directly returned an almost-empty response (a dead end at this stage, but worth remembering for later)
+
+![Mail Directory Contents](screenshots/recruit/2b-mail-directory.png)
+<!-- Screenshot showing the /mail directory listing / page content revealing HR username and config.php reference -->
 
 **Lesson:** Always read exposed emails/docs/comments carefully — they often contain indirect hints (usernames, file references) rather than direct credentials.
 
@@ -113,8 +118,13 @@ Only local files are allowed.
 ![File Wrapper Exploit](screenshots/recruit/4-file-wrapper-lfi.png)
 <!-- Screenshot showing successful local file read via file:// -->
 
-**Result:** Successfully read local files despite the app's "URL only" restriction — since `file://` is itself a valid URI scheme, just not one pointing to a remote host. **Flag 1** retrieved.
+**Result:** Successfully read local files despite the app's "URL only" restriction — since `file://` is itself a valid URI scheme, just not one pointing to a remote host. The leaked `config.php` contents included HR credentials.
 
+**Logging in with the retrieved HR credentials:**
+![HR Login - Flag 1](screenshots/recruit/4b-hr-login-flag1.png)
+<!-- Screenshot of the HR dashboard after login, showing Flag 1: THM{LOGGED_IN_USER} -->
+
+**Flag 1 Captured!** 🚩 `THM{LOGGED_IN_USER}`
 ---
 
 ### 4. Discovering SQL Injection
@@ -219,7 +229,13 @@ concat_ws(":", col1, col2, col3)     -- join columns with a separator, e.g. 1:ad
 ![Extracted Admin Credentials](screenshots/recruit/8-admin-creds-extracted.png)
 <!-- Screenshot of the final UNION query and extracted credentials -->
 
-Logged in as `admin` — **Flag 2** captured.
+**Logging in with the retrieved admin credentials:**
+Logged in as `admin`
+
+![ADMIN Login - Flag 2](screenshots/recruit/9-admin-login-flag2.png)
+<!-- Screenshot of the admin dashboard after login, showing Flag 2: THM{LOGGED_IN_ADM1N1} -->
+
+**Flag 2 Captured!** 🚩 `THM{LOGGED_IN_ADM1N1}`
 
 ---
 
